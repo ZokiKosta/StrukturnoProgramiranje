@@ -18,13 +18,16 @@
 
     int brojac=0, broevi=0; 
 
+    // moze i so while(true) i if(a==0 && b==0) break;, 
+
     while(a!=0 && b!=0){
         cin>>a>>b;
         broevi++;
         if(a+b==z) brojac++;
     }
+
     cout<<"Vnesovte "<<brojac<<" parovi od broevi chij zbir e "<<z<<endl;
-    cout<<"Procentot na parovi so zbir "<<z<<" e "<<brojac/broevi<<"%"<<endl;
+    cout<<"Procentot na parovi so zbir "<<z<<" e "<<(double)brojac/broevi<<"%"<<endl;
 
     return 0;
  }

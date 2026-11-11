@@ -1,4 +1,11 @@
 # Compiled C++ executables
+/zadaca01
+/zadaca02
+/zadaca03
+/zadaca04
+/zadaca05
+/zadaca06
+/zadaca07
 *.exe
 *.out
 *.o

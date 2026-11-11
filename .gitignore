@@ -1,4 +1,17 @@
-# Ignore compiled C++ executables
+# Compiled C++ executables
 *.exe
 *.out
+*.o
+*.obj
 a.out
+
+# Debug files
+*.pdb
+*.ilk
+
+# VS Code workspace settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak

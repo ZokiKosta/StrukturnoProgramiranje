@@ -1,40 +1,33 @@
-/*Од стандарден влез се чита еден природен број n. 
-Меѓу природните броеви помали од n, да се најде оној чиј што збир на делителите е најголем. 
-Во пресметувањето на збирот на делителите на даден број, да не се зема предвид самиот број.*/
+/*Од стандарден влез се читаат знаци се додека не се прочита извичник. 
+Во вака внесениот текст се скриени цели броеви (помали од 100). 
+Да се напише програма што ќе ги прочита сите знаци и на излез ќе го испечати збирот на сите броеви скриени во текстот.
+Напомена: cin во C++ ги игнорира празните места (space). За да не ги игнорира потребно е да се додаде noskipws пред читањето на знакот 
+(пр. cin >> noskipws >> znak;)*/
 
 #include <iostream>
 
 using namespace std;
 
-int zbirDel(int n){
+ int main(){
+    
+    char i;
+    
     int zbir=0;
-    for(int i=1;i<n;i++){
-        if(n%i==0){
-            zbir+=i;
+    int broj=0;
+    
+    while(cin>>noskipws>>i && i!='!'){
+        if(i>='0' && i<='9'){
+            broj = broj*10 + (i-'0');
+        }
+        else{
+            zbir+=broj;
+            broj = 0;
         }
     }
-    return zbir;
-}
-
-int main(){
     
-    int n;
-    cin>>n;
+    zbir+= broj;
     
-    int max;
-    bool isFirst=true;
-    
-    for(int i=1;i<n;i++){
-        if(isFirst){
-            max=i;
-            isFirst=false;
-            continue;
-        }
-        if(zbirDel(i)>max){
-            max=i;
-        }
-    }
-    cout<<max<<endl;
+    cout<<zbir;
     
     return 0;
 }

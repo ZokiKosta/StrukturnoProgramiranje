@@ -16,25 +16,29 @@ int main(){
 
     cin>>n>>x;
 
+    n--;
+    
     while(n>0){
+        bool found = true;
         int x1 = x;
         while(x1>0){
             int n1 = n;
             while(n1>0){
-                
+                if(n1%10==x1%10){
+                    found = false;
+                    break;
+                }else{
+                    n1/=10;
+                }
             }
-            if(n1%10==x1%10){
+            x1/=10;
+            if(!found){
                 break;
-            }else if(n1>0){
-                n1/=10;
-                continue;
-            }else{
-                x1/=10;
             }
         }
-        if(x1>0){
+        if(found){
             cout<<n<<endl;
-            break;
+            return 0;
         }
         n--;
     }

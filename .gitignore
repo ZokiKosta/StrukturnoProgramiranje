@@ -22,3 +22,8 @@ a.out
 # Temporary files
 *.tmp
 *.bak
+
+# Ignore files whose names contain no dot
+*
+!*/
+!*.*

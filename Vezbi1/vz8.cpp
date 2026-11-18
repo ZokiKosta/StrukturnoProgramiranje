@@ -1,4 +1,6 @@
-/**/
+/*
+Feit kolokviumska
+*/
 
 #include <iostream>
 
